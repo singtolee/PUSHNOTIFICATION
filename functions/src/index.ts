@@ -13,6 +13,9 @@ exports.pushNotification = functions.firestore.document('MYORDERS/{orderId}').on
                 title: "WHY ERROR",
                 body:"WHO MAKE ERROR"
             },
+            data:{
+                key1:"fore key"
+            },
             token:token
         };
         return admin.messaging().send(payload).then((resp)=>{
